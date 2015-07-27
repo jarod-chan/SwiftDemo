@@ -24,7 +24,29 @@ class CoreLocationController: UIViewController,CLLocationManagerDelegate {
             locationManger.requestAlwaysAuthorization()
         }
         locationManger.startUpdatingLocation()
+        
+        afnetworking()
 
+    }
+    
+    //调用afnetworking
+    func afnetworking(){
+        let manager = AFHTTPRequestOperationManager()
+        let url="http://weidemon.sinaapp.com/"
+        let params = ["a":"nothing","b":"nothing"]
+        
+        manager.GET(
+            url,
+            parameters:params,
+            success: {
+                (operation:AFHTTPRequestOperation!,responseObject:AnyObject!) in
+                println(responseObject)
+            },
+            failure:{
+                (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println(error)
+        })
+        
     }
     
     //是否ios8
