@@ -24,20 +24,31 @@ class ListController:UITableViewController{
         
         if (index==0){
 
+            gotoView("PhotoController")
+            
+        }
+        
+        
+        if(index==1){
+        
+            gotoView("CoreLocation")
+        }
+    }
+    
+    func gotoView(viewname:String){
+        
         //手动控制页面跳转
         var sb = self.storyboard;
-        if let vc = sb?.instantiateViewControllerWithIdentifier("PhotoController") as? UIViewController{
+        if let vc = sb?.instantiateViewControllerWithIdentifier(viewname) as? UIViewController{
             
             //这个方法只是弹出，无法显示按钮
             //self.presentViewController(vc, animated: true, completion: nil)
             
             self.navigationController?.pushViewController(vc, animated: true)
-
-        }
             
         }
+    
     }
-
 
 
 

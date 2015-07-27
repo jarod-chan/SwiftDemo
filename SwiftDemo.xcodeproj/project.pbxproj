@@ -15,6 +15,7 @@
 		E040A5D21B6227EB009F52F4 /* SwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040A5D11B6227EB009F52F4 /* SwiftDemoTests.swift */; };
 		E040A5DC1B6233D6009F52F4 /* impt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E040A5DB1B6233D6009F52F4 /* impt.jpg */; };
 		E077CEA91B631F610062EE7A /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077CEA81B631F610062EE7A /* ListController.swift */; };
+		E0D2F69C1B66018000273BC7 /* CoreLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D2F69B1B66018000273BC7 /* CoreLocationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		E040A5D11B6227EB009F52F4 /* SwiftDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoTests.swift; sourceTree = "<group>"; };
 		E040A5DB1B6233D6009F52F4 /* impt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = impt.jpg; sourceTree = "<group>"; };
 		E077CEA81B631F610062EE7A /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		E0D2F69B1B66018000273BC7 /* CoreLocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLocationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				E040A5BF1B6227EB009F52F4 /* Main.storyboard */,
 				E077CEA81B631F610062EE7A /* ListController.swift */,
 				E040A5BD1B6227EB009F52F4 /* PhotoController.swift */,
+				E0D2F69B1B66018000273BC7 /* CoreLocationController.swift */,
 				E040A5C21B6227EB009F52F4 /* Images.xcassets */,
 				E040A5B91B6227EB009F52F4 /* Supporting Files */,
 			);
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E040A5BE1B6227EB009F52F4 /* PhotoController.swift in Sources */,
+				E0D2F69C1B66018000273BC7 /* CoreLocationController.swift in Sources */,
 				E077CEA91B631F610062EE7A /* ListController.swift in Sources */,
 				E040A5BC1B6227EB009F52F4 /* AppDelegate.swift in Sources */,
 			);
