@@ -8,9 +8,35 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 //地理位置信息        
 class CoreLocationController: UIViewController,CLLocationManagerDelegate {
+    
+    //ios 自己的地图控件
+    @IBOutlet weak var mapView: MKMapView!
+    
+    //设置地图位置
+    func centerMapOnLocation(var location:CLLocation) {
+       
+        let regionRadius: CLLocationDistance = 1000
+        
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+            regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+        
+        //添加定位标记
+        var annotation = MKPointAnnotation()
+        annotation.coordinate = location.coordinate
+        annotation.title = "椒江"
+        annotation.subtitle = "测试信息"
+        
+        mapView.addAnnotation(annotation)
+    }
+    
+    
+    
+   
     
     let locationManger=CLLocationManager()
     
@@ -25,11 +51,12 @@ class CoreLocationController: UIViewController,CLLocationManagerDelegate {
         }
         locationManger.startUpdatingLocation()
         
-        afnetworking()
-
+        //afnetworking()
+         var location = CLLocation( latitude: 28.67, longitude: 121.44)
+         centerMapOnLocation(location)
     }
     
-    //调用afnetworking
+    //测试调用afnetworking
     func afnetworking(){
         let manager = AFHTTPRequestOperationManager()
         let url="http://weidemon.sinaapp.com/"
@@ -66,6 +93,8 @@ class CoreLocationController: UIViewController,CLLocationManagerDelegate {
         if(location.horizontalAccuracy>0){
             println(location.coordinate.latitude)
             println(location.coordinate.longitude)
+            
+           //centerMapOnLocation(location)
             
             //停止获取地址
             self.locationManger.stopUpdatingLocation()
